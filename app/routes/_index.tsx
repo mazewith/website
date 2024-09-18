@@ -4,6 +4,7 @@ import Learn from "src/components/Learn";
 import Features from "src/components/Features";
 import Header from "src/components/Header";
 import Footer from "src/components/Footer";
+import Records from "src/components/Records";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,6 +22,7 @@ export default function Index() {
     <div>
       <Header />
       <About />
+      <Records />
       <Features />
       <Learn />
       <Footer />

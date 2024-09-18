@@ -28,12 +28,14 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+          VITE_REDIS_URL: ${{ secrets.VITE_REDIS_URL }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/client'
+          path: "build/client"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
